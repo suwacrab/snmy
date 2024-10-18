@@ -30,9 +30,9 @@ local function build()
 	end
 	if argsearch("test") then
 	
-		local f_src = "dejiko.bmp"
-		local f_cmp = "dejiko.bin"
-		local f_tst = "dejiko2.bmp"
+		local f_src = "workdata\\dejiko.bmp"
+		local f_cmp = "workdata\\dejiko.bin"
+		local f_tst = "workdata\\dejiko2.bmp"
 	--[[
 		local f_src = "words.txt"
 		local f_cmp = "words.bin"
