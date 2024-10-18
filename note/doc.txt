@@ -5,10 +5,12 @@
 *	after the header, the data varies depending on the mode.
 *	3 compression modes in total
 	-	0: no compression
-		data is simply raw bytes immediately after the header
+		-	data is simply raw bytes immediately after the header
 	-	1: compressed (RLE)
-		1 byte for the run.
+		-	1 byte for the run.
 	-	2: compressed (LZ)
-		2 bytes for the offset to go backwards.(minus one)
+		-	2 bytes for the offset to go backwards. (minus one)
 	-	3: end code
-		compression should end here.
+		-	easily noticeable from the header being $FFFF
+		-	compression should end here.
+
