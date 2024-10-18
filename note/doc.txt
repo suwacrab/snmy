@@ -1,0 +1,14 @@
+-----------------------------------------------------------------------------@/
+*	each line begins with a 16-bit header.
+	-	high 2 bits: the compression mode
+	-	low 14 bits: length of whatever data the line'll use,, minus 1.
+*	after the header, the data varies depending on the mode.
+*	3 compression modes in total
+	-	0: no compression
+		data is simply raw bytes immediately after the header
+	-	1: compressed (RLE)
+		1 byte for the run.
+	-	2: compressed (LZ)
+		2 bytes for the offset to go backwards.(minus one)
+	-	3: end code
+		compression should end here.
